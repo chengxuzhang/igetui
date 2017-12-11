@@ -1,0 +1,20 @@
+{
+    "name": "zhanggongxin/igetui",
+    "description": "集成yii2可以使用的个推SDK",
+    "homepage": "https://github.com/chengxuzhang/igetui/tree/master",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhanggongxin",
+            "homepage": "http://www.codegong.com"
+        }
+    ],
+    "require": {
+        "php":">=5.6"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": { "": "igetui/" }
+    }
+}

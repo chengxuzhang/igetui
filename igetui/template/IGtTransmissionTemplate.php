@@ -1,5 +1,7 @@
 <?php 
 
+namespace igetui\igetui\template;
+
 class IGtTransmissionTemplate extends IGtBaseTemplate {
 
 	var $transmissionType;

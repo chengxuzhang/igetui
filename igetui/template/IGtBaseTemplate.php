@@ -1,7 +1,9 @@
 <?php
 
-require_once(dirname(__FILE__) . '/' . '../utils/ApnsUtils.php');
-require_once(dirname(__FILE__) . '/' . '../IGt.APNPayload.php');
+namespace igetui\igetui\template;
+
+use igetui\igetui\template\utils\ApnsUtils;
+use igetui\igetui\template\IGtAPNPayload;
 
 class IGtBaseTemplate
 {

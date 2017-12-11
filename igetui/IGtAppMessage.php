@@ -1,6 +1,8 @@
 <?php
-header("Content-Type: text/html; charset=utf-8");
-require_once(dirname(__FILE__) .'/'.'utils/AppConditions.php');
+namespace igetui\igetui;
+
+use igetui\igetui\utils\AppConditions;
+
 class IGtAppMessage extends IGtMessage{
 	
 	//array('','',..)

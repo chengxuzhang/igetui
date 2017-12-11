@@ -1,18 +1,50 @@
-<?php 
+<?php
 
-class IGtNotificationTemplate extends IGtBaseTemplate {
+namespace igetui\igetui\template;
 
+class IGtLinkTemplate extends IGtBaseTemplate {
+
+	/**
+	*String 
+	*/
 	var $text;
-	var $title;
-	var $logo;
-	var $logoURL;
-	var $transmissionType;
-	var $transmissionContent;
-	var $isRing;
-	var $isVibrate;
-	var $isClearable;
-	var $notifyStyle = 0;
 
+	/**
+	*String 
+	*/
+	var $title;
+
+	/**
+	*String 
+	*/
+	var $logo;
+	
+	var $logoURL;
+
+	/**
+	*boolean 
+	*/
+	var $isRing;
+
+	/**
+	*boolean 
+	*/
+	var $isVibrate;
+
+	/**
+	*String 
+	*/
+	var $url;
+	
+	/**
+	*boolean 
+	*/
+	var $isClearable;
+
+	/**
+	*int
+	*/
+	var $notifyStyle = 0;
 
 	public function  getActionChain() {
 
@@ -21,7 +53,7 @@ class IGtNotificationTemplate extends IGtBaseTemplate {
 		// 设置actionChain
 		$actionChain1 = new ActionChain();
 		$actionChain1->set_actionId(1);
-		$actionChain1->set_type(ActionChain_Type::refer);
+  		$actionChain1->set_type(ActionChain_Type::refer);
 		$actionChain1->set_next(10000);
 		
 		//通知
@@ -80,27 +112,24 @@ class IGtNotificationTemplate extends IGtBaseTemplate {
 		
 		$actionChain2->set_next(10010);
 		
+		$actionChain3 = new ActionChain();
+		$actionChain3->set_actionId(10010);
+		$actionChain3->set_type(ActionChain_Type::refer);
+		$actionChain3->set_next(10020);
+
+		
 		//goto
 		$actionChain3 = new ActionChain();
 		$actionChain3->set_actionId(10010);
 		$actionChain3->set_type(ActionChain_Type::refer);
-		$actionChain3->set_next(10030);
+		$actionChain3->set_next(10040);
 	
 
-		//appStartUp
-		$appStartUp = new AppStartUp();
- 		$appStartUp->set_android("");
-		$appStartUp->set_symbia("");
-		$appStartUp->set_ios("");
-
-		//启动app
+		//启动web
 		$actionChain4 = new ActionChain();
-		$actionChain4->set_actionId(10030);
-		$actionChain4->set_type(ActionChain_Type::startapp);
-		$actionChain4->set_appid("");
-		$actionChain4->set_autostart($this->transmissionType == '1'? true : false);
-		$actionChain4->set_appstartupid($appStartUp);
-		$actionChain4->set_failedAction(100);
+		$actionChain4->set_actionId(10040);
+		$actionChain4->set_type(ActionChain_Type::startweb);
+		$actionChain4->set_url($this->url);
 		$actionChain4->set_next(100);
 
 
@@ -114,12 +143,8 @@ class IGtNotificationTemplate extends IGtBaseTemplate {
 		return $actionChains;
 	}
 
-	function  get_transmissionContent() {
-		return $this->transmissionContent;
-	}
-	
 	function  get_pushType() {
-		return 'NotifyMsg';
+		return 'LinkMsg';
 	}
 
 	function  set_text($text) {
@@ -133,13 +158,13 @@ class IGtNotificationTemplate extends IGtBaseTemplate {
 	function  set_logo($logo) {
 		$this->logo = $logo;
 	}
-
+	
 	function  set_logoURL($logoURL) {
 		$this->logoURL = $logoURL;
 	}
-	
-	function  set_transmissionType($transmissionType) {
-		$this->transmissionType = $transmissionType;
+
+	function  set_url($url) {
+		$this->url = $url;
 	}
 
 	function  set_isRing($isRing) {
@@ -152,10 +177,6 @@ class IGtNotificationTemplate extends IGtBaseTemplate {
 
 	function  set_isClearable($isClearable) {
 		$this->isClearable = $isClearable;
-	}
-
-	function  set_transmissionContent($transmissionContent) {
-		$this->transmissionContent = $transmissionContent;
 	}
 	
 	function  set_notifyStyle($notifyStyle) {

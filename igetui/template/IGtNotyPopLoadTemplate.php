@@ -1,4 +1,7 @@
 <?php
+
+namespace igetui\igetui\template;
+
 class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
 	/**
 	 * 通知栏图标

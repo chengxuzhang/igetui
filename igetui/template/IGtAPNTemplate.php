@@ -1,4 +1,6 @@
 <?php
+
+namespace igetui\igetui\template;
 /**
  * Created by PhpStorm.
  * User: Kevin

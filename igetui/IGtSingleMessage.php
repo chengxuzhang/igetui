@@ -1,6 +1,7 @@
 <?php 
+namespace igetui\igetui;
 
-class IGtListMessage extends IGtMessage{
+Class IGtSingleMessage extends IGtMessage{
 	
 	public function __construct(){
 		parent::__construct();

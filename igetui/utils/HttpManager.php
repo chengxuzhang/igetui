@@ -1,11 +1,13 @@
 <?php
+namespace igetui\igetui\utils;
 /**
  * Created by PhpStorm.
  * User: Administrator
  * Date: 15-5-9
  * Time: 下午3:12
  */
-require_once(dirname(__FILE__) . '/' . 'LogUtils.php');
+use igetui\igetui\utils\LogUtils;
+
 class HttpManager
 {
     static $curls = array();

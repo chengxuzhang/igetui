@@ -1,18 +1,19 @@
 <?php
+namespace igetui\protobuf;
 /**
  * Including of all files needed to parse messages
  * @author Nikolai Kordulla
  */
-require_once(dirname(__FILE__). '/' . 'encoding/pb_base128.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_scalar.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_enum.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_bytes.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_string.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_int.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_bool.php');
-require_once(dirname(__FILE__). '/' . 'type/pb_signed_int.php');
-require_once(dirname(__FILE__). '/' . 'reader/pb_input_reader.php');
-require_once(dirname(__FILE__). '/' . 'reader/pb_input_string_reader.php');
+use igetui\protobuf\encoding\PbBase128;
+use igetui\protobuf\type\PbScalar;
+use igetui\protobuf\type\PbEnum;
+use igetui\protobuf\type\PbBytes;
+use igetui\protobuf\type\PbString;
+use igetui\protobuf\type\PbInt;
+use igetui\protobuf\type\PbBool;
+use igetui\protobuf\type\PbSignedInt;
+use igetui\protobuf\reader\PbInputReader;
+use igetui\protobuf\reader\PbInputStringReader;
 /**
  * Abstract Message class
  * @author Nikolai Kordulla

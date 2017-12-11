@@ -1,4 +1,5 @@
 <?php
+namespace igetui\protobuf\encoding;
 
 /**
  * Base 128 varints - decodes and encodes base128 varints to/from decimal

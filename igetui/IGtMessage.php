@@ -1,4 +1,5 @@
 <?php 
+namespace igetui\igetui;
 
 class IGtMessage{
 	var  $isOffline;

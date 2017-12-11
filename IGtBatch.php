@@ -1,12 +1,13 @@
 <?php
+
+namespace igetui
 /**
  * Created by PhpStorm.
  * User: Administrator
  * Date: 15-4-9
  * Time: 下午3:45
  */
-header("Content-Type: text/html; charset=utf-8");
-require_once(dirname(__FILE__) . '/' . 'IGt.Push.php');
+user igetui\IGTPush;
 
 class IGtBatch
 {

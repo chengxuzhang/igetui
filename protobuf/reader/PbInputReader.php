@@ -1,4 +1,5 @@
 <?php
+namespace igetui\protobuf\reader;
 /**
  * Abstract class for an input reader
  */

@@ -1,4 +1,5 @@
 <?php
+namespace igetui\exception;
 /**
  * Created by PhpStorm.
  * User: Administrator

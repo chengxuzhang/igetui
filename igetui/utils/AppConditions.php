@@ -1,4 +1,5 @@
 <?php
+namespace igetui\igetui\utils;
 /**
  * Created by PhpStorm.
  * User: Songmh

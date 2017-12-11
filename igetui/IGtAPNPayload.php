@@ -1,4 +1,5 @@
 <?php
+namespace igetui\igetui;
 /**
  * Created by PhpStorm.
  * User: Administrator

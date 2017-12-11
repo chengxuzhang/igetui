@@ -1,4 +1,5 @@
 <?php
+namespace igetui\protobuf\type;
 /**
  * @author Nikolai Kordulla
  */

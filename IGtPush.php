@@ -1,29 +1,25 @@
 <?php
-/**
- * VERSION 3.3.2.1
- */
-header("Content-Type: text/html; charset=utf-8");
-require_once(dirname(__FILE__) . '/' . 'protobuf/pb_message.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Req.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Message.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.AppMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.ListMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.SingleMessage.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/IGt.Target.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.BaseTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.LinkTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.NotificationTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.TransmissionTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.NotyPopLoadTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/template/IGt.APNTemplate.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/GTConfig.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/HttpManager.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/ApiUrlRespectUtils.php');
-require_once(dirname(__FILE__) . '/' . 'igetui/utils/LangUtils.php');
+namespace igetui
+
+use igetui\protobuf\PbMessage;
+use igetui\igetui\IGtReq;
+use igetui\igetui\IGtMessage;
+use igetui\igetui\IGtAppMessage;
+use igetui\igetui\IGtSingleMessage;
+use igetui\igetui\IGtTarget;
+use igetui\igetui\template\IGtBaseTemplate;
+use igetui\igetui\template\IGtLinkTemplate;
+use igetui\igetui\template\IGtNotificationTemplate;
+use igetui\igetui\template\IGtTransmissionTemplate;
+use igetui\igetui\template\IGtNotyPopLoadTemplate;
+use igetui\igetui\template\IGtAPNTemplate;
+use igetui\igetui\utils\GTConfig;
+use igetui\igetui\utils\HttpManager;
+use igetui\igetui\utils\ApiUrlRespectUtils;
+use igetui\igetui\utils\LangUtils;
 
 
-
-Class IGeTui
+Class IGtPush
 {
     var $appkey; //第三方 标识
     var $masterSecret; //第三方 密钥

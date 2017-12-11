@@ -1,4 +1,5 @@
 <?php
+namespace igetui\igetui;
 /**
  * 个推IOS多媒体消息，支持图片、音频、视频
  * Created by PhpStorm.

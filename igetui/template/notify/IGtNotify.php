@@ -1,5 +1,7 @@
 <?php
 
+namespace igetui\igetui\template\notify;
+
 /**
  * Class IGtNotify
  */
